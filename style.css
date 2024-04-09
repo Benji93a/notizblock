@@ -1,0 +1,270 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 56px;
+    margin: 0;
+    margin-left: 16px;
+}
+
+.logo {
+    height: 100px;
+    object-fit: cover;
+    rotate: 5deg;
+}
+
+.header-main {
+    padding: 16px 120px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+}
+
+.buttons{
+    height: 64px;
+    width: 64px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    border: 2px solid lightgray;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.08);
+}
+
+.add-btn{
+    height: 32px;
+}
+
+.trash-btn{
+    height: 32px;
+}
+
+.notes-section {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.note-container {
+    background-color: rgb(252, 247, 234);
+    box-sizing: border-box;
+    height: fit-content;
+    white-space: normal;
+    width: 300px;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.note {
+    margin: 0;
+}
+
+.title {
+    margin: 8px;
+    white-space: wrap;
+}
+
+.add-dialog {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 999;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.add-info {
+    background-color: white;
+    border: 1px solid lightgrey;
+    height: 50vh;
+    width: 50vw;
+    max-width: 500px;
+    min-width: 300px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+#title {
+    border: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    text-overflow: clip;
+    width: -webkit-fill-available;
+}
+
+#title:focus-visible {
+    outline: none;
+}
+
+textarea {
+    margin-top: 16px;
+    resize: none;
+    width: -webkit-fill-available;
+    height: 75%;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+textarea:focus-visible {
+    outline: none;
+}
+
+.button-img {
+    height: 24px;
+}
+
+
+.button-small {
+    height: 48px;
+    width: 48px;
+}
+
+.red {
+    filter: drop-shadow(0px 0px 2px #ff0000);
+}
+
+.green {
+    filter: drop-shadow(0px 0px 2px green);
+}
+
+.trash-info {
+    background-color: white;
+    border: 1px solid lightgrey;
+    height: 95vh;
+    width: 85vw;
+    min-width: 300px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+}
+
+#trash-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.trash-container-btn img{
+    height: 32px;
+    width: 32px;
+    object-fit: cover;
+}
+
+.trash-container-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restore {
+    position: absolute;
+    top: 8px;
+    right: 48px;
+}
+
+.restore:hover {
+    filter: drop-shadow(0px 0px 2px green);
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.remove:hover {
+    filter: drop-shadow(0px 0px 2px #ff0000);
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.close-trash {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.close-trash:hover {
+    filter: drop-shadow(0px 0px 2px #ff0000);
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+@media (max-width: 800px) {
+    .header-logo h1 {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .logo {
+        height: 80px;
+    }
+
+    .header-main {
+        padding: 16px 48px;
+    }
+
+    .buttons {
+        height: 48px;
+        width: 48px;
+    }
+
+    .add-btn{
+        height: 28px;
+    }
+    
+    .trash-btn{
+        height: 32px;
+    }
+}

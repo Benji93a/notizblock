@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizbuch</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <script src="./java.js"></script>
+</head>
+
+<body onload="render()">
+
+    <header>
+        <div class="header-main">
+            <div class="header-logo">
+                <img class="logo" src="./bilder/shoppaymentorderbuy-27_icon-icons.com_73879.png" alt="Logo">
+                <h1><i>Notizbuch</i></h1>
+            </div>
+            <div class="header-buttons">
+                <div onclick="toggleMenu()" class="buttons"><img class="add-btn" src="./bilder/1486395885-plus_80605.png" alt="Notiz Erstellen">
+                </div>
+                <div onclick="toggleTrash()" class="buttons"><img class="trash-btn" src="./bilder/mulleimer.png"
+                        alt="Papierkorb"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="content" class="notes-section"></section>
+
+    <section id="add" class="add-dialog d-none">
+        <div class="add-info">
+            <input id="title" type="text" placeholder="Titel" required>
+            <textarea id="note" placeholder="Deine Notiz" required></textarea>
+            <div class="header-buttons">
+                <button class="buttons button-small red" onclick="toggleMenu()"><img class="button-img rotate-img"
+                        src="./bilder/cross_icon-icons.com_72347.png" alt=""></button>
+                <button class="buttons button-small green" onclick="addNote()"><img class="button-img"
+                        src="./bilder/check_accept_done_tick_icon_143633.png" alt=""></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="trash" class="add-dialog d-none">
+        <div class="trash-info">
+            <div onclick="toggleTrash()" class="trash-container-btn  close-trash"><img src="./bilder/cross_icon-icons.com_72347.png" alt=""></div>
+            <div  id="trash-content"></div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
